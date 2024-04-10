@@ -1,0 +1,48 @@
+ .body {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.table-wrapper {
+  max-width: 800px;
+  /* קביעת רוחב מקסימלי לטבלה */
+  margin: 0 auto;
+  /* מירכוז הטבלה באמצע הדף */
+}
+
+table {
+  width: 95%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  /* font-size: 14px; */
+  background-color: white;
+}
+
+th,
+td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #dddddd;
+}
+
+#search {
+  margin-left: auto;
+  margin-right: 2.5%;
+  margin-bottom: 10px;
+}
+
+.body {
+  background-color: rgba(255, 255, 255, 0.5);
+  ;
+}

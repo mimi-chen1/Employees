@@ -1,0 +1,10 @@
+<td>{{ employee.firstName }}</td>
+<td>{{ employee.lastName }}</td>
+<td>{{ employee.tz }}</td>
+<td>{{ employee.employmentStartDate }}</td>
+<td style="text-align: center;">
+  <mat-icon (click)="editEmployee(employee)">edit</mat-icon>
+</td>
+<td style="text-align: center;">
+  <mat-icon (click)="deleteEmployee(employee.id)">delete</mat-icon>
+</td>

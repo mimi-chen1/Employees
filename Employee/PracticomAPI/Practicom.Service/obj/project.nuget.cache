@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "x6TTSSje2kH99kkvXOirO1LEO47WcTkpRoTh/veCiUwmdri0E52NArPMSukx/sP2UOnbVfkPZwz5tmHg5zt/FQ==",
+  "success": true,
+  "projectFilePath": "C:\\תכנות ו\\תרגיל פרקטיקום\\Employee\\PracticomAPI\\Practicom.Service\\Practicom.Service.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user1\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Users\\user1\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

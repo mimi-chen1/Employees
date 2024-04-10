@@ -1,0 +1,112 @@
+.search-container {
+    margin-left: auto;
+}
+
+a.mat-button {
+    color: black;
+}
+
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-right: 2%;
+    margin-left: 3%;
+    background-color: #b0b0b0;
+    border-radius: 25px;
+    padding: 4px 7px;
+    width: 12%;
+    text-align: center;
+
+}
+
+.search-container .mat-input {
+    border: none;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    outline: none;
+}
+
+.search-icon {
+    background-color: transparent;
+    color: white;
+    margin-right: 2%;
+}
+
+.se {
+    margin-top: -10%;
+}
+
+.search {
+    background-color: #ffffff9f;
+    width: 85%;
+    border-radius: 5px;
+    height: 20px;
+    padding: 1%;
+    display: flex;
+
+
+}
+.icon-container {
+    margin-left: auto; /* תמקם את האייקון בצד ימין */
+}
+
+.mat-toolbar {
+    background-color: #2196F3;
+    /* רקע צבע כחול */
+    font-size: 20px;
+    /* גודל הפונט */
+    padding: 10px;
+    /* רווח מסביב לתוכן */
+}
+
+/* Style the toolbar buttons */
+.mat-toolbar-row button {
+    margin-right: 10px;
+    /* רווח מימין בין הכפתורים */
+    color: white;
+    /* צבע הטקסט של הכפתורים */
+    background-color: #4CAF50;
+    /* רקע צבע ירוק */
+    border: none;
+    /* מסיר את הגבולות */
+    border-radius: 5px;
+    /* פינות מעוגלות */
+    padding: 10px 20px;
+    /* רווח בתוך הכפתור */
+    cursor: pointer;
+    /* מעביר לסמן העכבר */
+}
+
+/* Change button color on hover */
+.mat-toolbar-row button:hover {
+    background-color: #45a049;
+    /* רקע צבע ירוק כהה */
+}
+
+.mat-toolbar-row a {
+    color: black;
+    /* צבע הקישורים */
+    text-decoration: none;
+    /* מסיר את הקו תחתון */
+}
+
+/* Change link color on hover */
+.mat-toolbar-row a:hover {
+    color: #666;
+    /* צבע הקישורים בעת העכבר מעליהם */
+}
+
+.link {
+    color: black;
+    font-size: 18px;
+    margin-right: 10px;
+    text-decoration: none;
+    /* מונע קווים מתחת לקישור */
+}
+
+.link:hover {
+    text-decoration: none;
+    /* מונע קווים מתחת לקישור גם במצב העברת העכבר מעליו */
+}

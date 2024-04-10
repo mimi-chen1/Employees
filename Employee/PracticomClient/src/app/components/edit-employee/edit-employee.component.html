@@ -1,0 +1,99 @@
+<h1 mat-dialog-title>Edit Employee</h1>
+<div mat-dialog-content class="mat-typography">
+<form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+
+  <label for="firstName">First Name:</label>
+  <br>
+  <input type="text" id="firstName" formControlName="firstName" >
+  <br>
+  <mat-error *ngIf="employeeForm.get('firstName')?.hasError('required') && employeeForm.get('firstName')?.touched">
+    First name is a required field
+  </mat-error>
+  <mat-error *ngIf="employeeForm.get('firstName')?.hasError('minlength') && employeeForm.get('firstName')?.touched">
+    First name must be at least 2 characters long
+  </mat-error>
+
+  <label for="lastName">Last Name:</label>
+  <br>
+  <input type="text" id="lastName" formControlName="lastName" required >
+  <br>
+  <mat-error *ngIf="employeeForm.get('lastName')?.hasError('required') && employeeForm.get('lastName')?.touched">
+    Last name is a required field
+  </mat-error>
+  <mat-error *ngIf="employeeForm.get('lastName')?.hasError('minlength') && employeeForm.get('lastName')?.touched">
+    Last name must be at least 2 characters long
+  </mat-error>
+
+  <label for="tz">ID Number:</label>
+  <br>
+  <input type="text" id="tz" formControlName="tz" >
+  <br>
+ <mat-error *ngIf="employeeForm.get('tz')?.hasError('required') && employeeForm.get('tz')?.touched">
+  ID number is required
+</mat-error> 
+  <mat-error *ngIf="employeeForm.get('tz')?.hasError('pattern') && employeeForm.get('tz')?.touched">
+    ID number must contain exactly 9 characters
+  </mat-error> 
+
+  <label for="employmentStartDate">Employment Start Date:</label>
+  <br>
+  <input type="date" id="employmentStartDate" formControlName="employmentStartDate" required>
+  <br>
+  <mat-error
+      *ngIf="employeeForm.get('employmentStartDate')?.hasError('required') && employeeForm.get('employmentStartDate')?.touched">
+      Employment start date is a required field
+    </mat-error>
+<label for="dateOfBirth">Date of Birth:</label>
+<br>
+<input type="date" id="dateOfBirth" formControlName="dateOfBirth" required>
+<br>
+<mat-error *ngIf="employeeForm.get('dateOfBirth')?.hasError('required') && employeeForm.get('dateOfBirth')?.touched">
+  Date of birth is a required field
+</mat-error>
+<mat-error *ngIf="employeeForm.get('dateOfBirth')?.hasError('below18')">
+  Employee must be over 18 years old
+</mat-error>
+  <label for="gender">Gender:</label>
+  <br>
+  <select id="gender" formControlName="gender" required>
+    <option [ngValue]="1">Male</option>
+    <option [ngValue]="2">Female</option>
+  </select>
+  <br>
+  <mat-error *ngIf="employeeForm.get('gender')?.hasError('required') && employeeForm.get('gender')?.touched">
+    Gender is a required field
+  </mat-error>
+
+  <div formArrayName="positions" class="sub-form">
+    <mat-label>Positions</mat-label>
+    <br>
+    <div *ngFor="let position of positions.controls; let index = index" [formGroupName]="index">
+        <label for="positions{{index}}">Position:</label>
+        <select id="positions{{index}}" formControlName="positionId">
+            <option *ngFor="let pos of allPositions" [value]="pos.id">{{ pos.name }}</option>
+        </select>
+        <mat-checkbox formControlName="isAdministrative">Administrative</mat-checkbox>
+        <label for="dateStart">Position Start Date:</label>
+        <br>
+        <label for="dateStart">Entry Date:</label>
+        <input type="date" id="dateStart" name="dateStart" formControlName="dateStart">
+
+  <br>
+  <mat-error *ngIf="position.hasError('positionAlreadyExists')">
+    <span>
+        Position already exists in the list
+    </span>
+</mat-error>
+
+    </div>
+    <mat-error *ngIf="employeeForm.hasError('invalidDateStart')">
+      The job start date cannot be before the employee's start date.
+    </mat-error>
+</div>
+<div>
+    <br>
+    <button mat-raised-button color="primary" type="button" (click)="addPosition()">Add Position</button>
+</div>
+  <button type="submit">Submit</button>
+</form>
+</div>

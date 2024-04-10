@@ -1,0 +1,37 @@
+
+input[type="text"], input[type="date"], select {
+  width: 80%; /* התאמה לרוחב המרכזי של הקומפוננטה */
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50; /* צבע רקע */
+  color: white; /* צבע טקסט */
+  padding: 14px 20px; /* רוחב וגובה של כפתור */
+  margin: 8px 0; /* הריווח בין הכפתורים */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049; /* צבע רקע בעת העברת העכבר */
+}
+
+button:disabled {
+  background-color: #cccccc; /* צבע רקע של כפתור מנוטרל */
+  cursor: not-allowed; /* סמל העכבר משתנה לא ניתן ללחיצה */
+}
+mat-error {
+  color: red;
+}
+.mat-typography {
+  max-height: 500px;  
+  width: 400px;
+  overflow-y: auto; /* הוספת גלגול רק כאשר התוכן גדול מהאלמנט */
+  text-align: center;
+}
