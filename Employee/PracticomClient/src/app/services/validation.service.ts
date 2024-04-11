@@ -42,11 +42,11 @@ export class ValidationService {
       }
     };
   }
-  validatePositionId(): ValidatorFn {
+   validatePositionId(): ValidatorFn {
     return (positions: AbstractControl): ValidationErrors | null => {
       const formArray = positions as FormArray;
       const numersPositions = formArray.controls.map(p => p.get("positionId")?.value as number);
-
+  
       for (let i = 0; i < numersPositions.length; i++) {
         for (let x = i + 1; x < numersPositions.length; x++) {
           if (numersPositions[i] == numersPositions[x]) {
@@ -55,15 +55,14 @@ export class ValidationService {
           }
         }
       }
+        // תיקון: איפוס שגיאות אם אין תפקידים כפולים
+      for (let i = 0; i < numersPositions.length; i++) {
+        formArray.controls[i].setErrors(null);
+      }
+  
       return null;
     };
   }
   
-
- 
- 
-
-
-
 
 }
